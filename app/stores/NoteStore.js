@@ -3,9 +3,7 @@ import NoteActions from '../actions/NoteActions';
 
 export default class NoteStore {
   constructor() {
-
     this.bindActions(NoteActions);
-
     this.notes = [
       {
         id: uuid.v4(),
@@ -17,7 +15,7 @@ export default class NoteStore {
       }
     ];
   }
-
+  
   create(note) {
     this.setState({
       notes: this.notes.concat(note)
